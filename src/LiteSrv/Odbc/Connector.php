@@ -19,7 +19,7 @@ class Connector extends BaseConnector implements ConnectorInterface
 	{
 		$options = $this->getOptions($config);
 
-		$dsn = array_get($config, 'dsn');
+		$dsn = $config['dsn'];
 
 		return $this->createConnection($dsn, $config, $options);
 	}
